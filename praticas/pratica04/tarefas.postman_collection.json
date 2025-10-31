@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "5210a52a-4396-4598-baab-0ae362fc33b2",
+		"name": "tarefas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48361384",
+		"_collection_link": "https://matheus-costa1-5332345.postman.co/workspace/598f3113-b516-4a05-85fa-01b0b8faa216/collection/48361384-5210a52a-4396-4598-baab-0ae362fc33b2?action=share&source=collection_link&creator=48361384"
+	},
+	"item": [
+		{
+			"name": "\"GET /tarefas – listar\" (URL: http://localhost:3000/tarefas)",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/tarefas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"POST /tarefas – criar\" (URL: http://localhost:3000/tarefas, Body com a tarefa).",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"nome\": \"Estudar API REST\",\n   \"prioridade\": 1,\n   \"concluida\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"GET /tarefas/{id} – por id\" (URL com o idTarefa criado).",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"nome\": \"Estudar API REST\",\n   \"prioridade\": 1,\n   \"concluida\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/8c99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"8c99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"GET /tarefas/1 – não encontrado\" (espera 404 se não existir).",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"nome\": \"Estudar API REST\",\n   \"prioridade\": 1,\n   \"concluida\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"PUT /tarefas/{id} – atualizar\" (URL com o idTarefa, Body com os campos atualizados).",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"nome\": \"Estudar API REST\",\n   \"prioridade\": 2,\n   \"concluida\": true\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/8c99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"8c99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"PATCH /tarefas/{id} – atualizar parcial\" (URL com o idTarefa, Body parcial).",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n   \"concluida\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/8c99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"8c99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"DELETE /tarefas/{id} – remover\" (URL com o idTarefa).",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.4.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n   \"concluida\": false\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/8c99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"8c99"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

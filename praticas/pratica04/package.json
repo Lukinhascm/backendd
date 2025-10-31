@@ -1,0 +1,19 @@
+{
+  "name": "pratica04",
+  "version": "1.0.0",
+  "description": "API REST de Tarefas usando Express e Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["api", "tarefas", "express", "nodejs"],
+  "author": "Seu Nome",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
